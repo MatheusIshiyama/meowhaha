@@ -1,0 +1,31 @@
+{
+  "name": "late-night-haven",
+  "version": "1.0.0",
+  "description": "🌙 A Discord message bot for Late Night Haven — sends vibe messages, logs arrivals, and sets the mood.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "discord",
+    "webhook",
+    "bot",
+    "late-night",
+    "vibes",
+    "typescript"
+  ],
+  "repository": "https://github.com/MatheusIshiyama/late-night-haven.git",
+  "author": "Matheus Ishiyama <matheus.ishiyama@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
