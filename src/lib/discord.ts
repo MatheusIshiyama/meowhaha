@@ -1,5 +1,6 @@
 import { logger } from '@/utils/logger';
 import axios from 'axios';
+import FormData from 'form-data';
 
 class Discord {
   private token: string;
@@ -10,13 +11,16 @@ class Discord {
     this.api = 'https://discord.com/api/v10';
   }
 
-  async sendMessage(channelId: string, data: any) {
+  async sendMessage(channelId: string, data: any, withComponents: boolean = false) {
     try {
       if (!this.token) throw new Error('DISCORD_TOKEN is not set');
 
-      const response = await axios.post(`${this.api}/channels/${channelId}/messages`, data, {
+      const isFormData = data instanceof FormData;
+
+      const response = await axios.post(`${this.api}/channels/${channelId}/messages?with_components=${withComponents}`, data, {
         headers: {
           Authorization: `Bot ${this.token}`,
+          ...(isFormData ? data.getHeaders() : { 'Content-Type': 'application/json' }),
         },
       });
 
