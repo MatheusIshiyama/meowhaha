@@ -1,18 +1,21 @@
 import { channelIds } from '@/config/channelIds';
+import { roleIds } from '@/config/roleIds';
+import { DiscordMessage } from '@/types/discordMessage';
 
-const welcomeMessage = {
-  flags: 1 << 15,
+const welcomeMessage: DiscordMessage = {
+  flags: 32768,
   components: [
     {
       type: 17,
       components: [
         {
           type: 10,
-          content: '# 🛬 You’ve landed in the Haven.',
+          content: '# ⚡ You’ve entered the Pulse.',
         },
         {
           type: 10,
-          content: 'Late Night Haven is a cozy, community-driven server where it’s always a little past midnight. Here you can:',
+          content:
+            'Welcome to **Nightpulse** — a digital space where it’s always a bit past midnight and there’s always a quiet buzz in the air.',
         },
         {
           type: 14,
@@ -21,19 +24,23 @@ const welcomeMessage = {
         },
         {
           type: 10,
-          content: `- 🗨️ Chat casually in <#${channelIds.lobby}>`,
+          content: 'Here’s what you’ll find inside:',
         },
         {
           type: 10,
-          content: `- 📸 Drop memes, pics, and art in <#${channelIds['media-share']}>`,
+          content: `- 💬 Real talk in <#${channelIds.lobby}>`,
         },
         {
           type: 10,
-          content: `- 🎧 Chill with lo-fi or ambient music in <#${channelIds['lo-fi-lounge']}>`,
+          content: `- 🖼️ Art, clips, & vibes in <#${channelIds['media-share']}>`,
         },
         {
           type: 10,
-          content: `- 🎮 Join casual games in <#${channelIds.gameRoom}>`,
+          content: `- 🎧 Chill with lo-fi or ambient music in <#${channelIds.afterhours}>`,
+        },
+        {
+          type: 10,
+          content: `- 🎮 Game nights and chill runs in <#${channelIds.gameRoom}>`,
         },
         {
           type: 10,
@@ -50,19 +57,19 @@ const welcomeMessage = {
         },
         {
           type: 10,
-          content: '- 🌙︱Night Owl – regulars and late lurkers',
+          content: `- <@&${roleIds.corePulse}> – trusted team and power users`,
         },
         {
           type: 10,
-          content: '- 🎮︱Gamer – pingable for co-op nights',
+          content: `- <@&${roleIds.gamer}> – gamers, pings open`,
         },
         {
           type: 10,
-          content: '- 🎧︱Vibe Check – music lovers',
+          content: `- <@&${roleIds.vibeCheck}> – music lovers`,
         },
         {
           type: 10,
-          content: '- 💎︱Haven Booster – thank you, legends 💖',
+          content: `- <@&${roleIds.booster}> – thank you, legends 💖`,
         },
         {
           type: 14,
@@ -71,15 +78,11 @@ const welcomeMessage = {
         },
         {
           type: 10,
-          content: `🎉 If you're new, you'll appear in <#${channelIds.arrivals}> — don’t be shy!\n`,
+          content: `🎉 You’ll show up in <#${channelIds.arrivals}> — feel free to wave. Or don’t. No pressure.`,
         },
         {
           type: 10,
-          content: '👉 To unlock more roles and perks, stay active and explore.\n',
-        },
-        {
-          type: 10,
-          content: "Thanks for being here. It's late. And you're exactly where you should be.",
+          content: 'Stay low or shine bright — either way, you’re part of the current now.\nLet’s keep the pulse going ⚡',
         },
       ],
     },

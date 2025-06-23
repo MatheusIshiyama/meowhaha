@@ -6,9 +6,9 @@ import welcomeMessage from '@/messages/welcome';
 import { logger } from '@/utils/logger';
 
 export class DiscordMessages {
-  async sendStartHereMessage() {
+  async sendStartHereMessage(): Promise<void> {
     try {
-      const channelId = channelIds['start-here'];
+      const channelId: string = channelIds['start-here'];
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendStartHereMessage', 'Channel ID not found');
 
@@ -19,9 +19,9 @@ export class DiscordMessages {
     }
   }
 
-  async sendWelcomeMessage() {
+  async sendWelcomeMessage(): Promise<void> {
     try {
-      const channelId = channelIds['welcome'];
+      const channelId: string = channelIds['welcome'];
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendWelcomeMessage', 'Channel ID not found');
 
@@ -32,4 +32,4 @@ export class DiscordMessages {
   }
 }
 
-export const discordMessages = new DiscordMessages();
+export const discordMessages: DiscordMessages = new DiscordMessages();

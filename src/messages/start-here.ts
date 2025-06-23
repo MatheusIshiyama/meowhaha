@@ -1,18 +1,20 @@
 import { channelIds } from '@/config/channelIds';
+import { DiscordMessage } from '@/types/discordMessage';
 
-const startHereMessage = {
-  flags: 1 << 15,
+const startHereMessage: DiscordMessage = {
+  flags: 32768,
   components: [
     {
       type: 17,
       components: [
         {
           type: 10,
-          content: '# Welcome to Late Night Haven!',
+          content: '# ⚡ Welcome to Nightpulse!',
         },
         {
           type: 10,
-          content: 'This is a chill space for night owls, creatives, gamers, lo-fi lovers, and everyone in between.',
+          content: `This is a calm-but-charged space for night coders, gamers, creatives, lo-fi lovers, and late scrollers.\n
+            We keep it friendly, focused, and flowing — like static in the midnight air.`,
         },
         {
           type: 14,
@@ -21,31 +23,31 @@ const startHereMessage = {
         },
         {
           type: 10,
-          content: "Here's how to get started:",
+          content: 'Here’s how to sync in:',
         },
         {
           type: 10,
-          content: '### - Read the vibe',
+          content: '### - Feel the vibe',
         },
         {
           type: 10,
-          content: "Please keep things respectful, friendly, and relaxed. No spam, hate, or drama. We're here to unwind — not rage.",
+          content: 'No spam. No hate. No pressure. Just kindness, fun, and good timing.',
         },
         {
           type: 10,
-          content: '### - Be kind',
+          content: '### - Respect the rhythm',
         },
         {
           type: 10,
-          content: 'Support each other. Whether you’re sharing memes or venting late-night thoughts, empathy goes a long way.',
+          content: `We’re not loud, but we’re real. Empathy rules — especially in quiet spaces like <#${channelIds['vent-space']}>.`,
         },
         {
           type: 10,
-          content: '### - Stay on theme',
+          content: '### - Stay on beat',
         },
         {
           type: 10,
-          content: 'Use the right channels (voice, game, media, etc.) and keep the vibe intact.',
+          content: 'Use channels as intended — text, voice channels, bots, media — so the flow stays clean.',
         },
         {
           type: 10,
@@ -53,7 +55,8 @@ const startHereMessage = {
         },
         {
           type: 10,
-          content: 'Boosters, devs, and chill lurkers are all welcome. Join a voice call, post a song, or just watch the moon rise.',
+          content:
+            'Boosters, builders, lurkers, and listeners all power the pulse.\nDrop a song, code something, or just hang out in voice.',
         },
         {
           type: 14,
@@ -66,11 +69,11 @@ const startHereMessage = {
         },
         {
           type: 10,
-          content: `🎮 Join us in <#${channelIds.gameRoom}>`,
+          content: `🎧 Chill in <#${channelIds.afterhours}>`,
         },
         {
           type: 10,
-          content: `📡 Watch our server stats live in <#${channelIds.stats}>`,
+          content: `⚡ Watch the server’s heart beat in <#${channelIds.stats}>`,
         },
       ],
     },
