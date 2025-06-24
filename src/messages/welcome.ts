@@ -1,6 +1,9 @@
+/* eslint-disable max-len */
 import { channelIds } from '@/config/channelIds';
+import { animatedEmojiIds, staticEmojiIds } from '@/config/emojiIds';
 import { roleIds } from '@/config/roleIds';
 import { DiscordMessage } from '@/types/discordMessage';
+import { divisor, margin1, margin2 } from '@/utils/divider';
 
 const welcomeMessage: DiscordMessage = {
   flags: 32768,
@@ -10,79 +13,77 @@ const welcomeMessage: DiscordMessage = {
       components: [
         {
           type: 10,
-          content: '# ⚡ You’ve entered the Pulse.',
+          content: `# ${animatedEmojiIds.meow_meow} Welcome to meowhaha! ${animatedEmojiIds.happy_cat}`,
         },
+        margin1,
+        {
+          type: 10,
+          content: `${animatedEmojiIds.say_hi} Hi there, brave wanderer of the meowniverse ${animatedEmojiIds.nods}\nyou’ve just entered a realm of chaos, cats, creativity, and occasional keyboard smashing.'`,
+        },
+        margin1,
         {
           type: 10,
           content:
-            'Welcome to **Nightpulse** — a digital space where it’s always a bit past midnight and there’s always a quiet buzz in the air.',
+            'This server is home to artists, gamers, devs, and ✨ feral vibes ✨.\nWe scream, we vibe, we post cursed memes, and sometimes we make cool things too.',
         },
+        ...divisor,
         {
-          type: 14,
-          divider: true,
-          spacing: 2,
+          type: 10,
+          content: `### ${staticEmojiIds.pin_icon} Here’s how to get started:`,
+        },
+        margin1,
+        {
+          type: 10,
+          content: `${staticEmojiIds.star_icon} Read the rules in <#${channelIds['read-the-rules']}> so you don’t get scratched.`,
         },
         {
           type: 10,
-          content: 'Here’s what you’ll find inside:',
+          content: `${staticEmojiIds.star_icon} Grab your roles in <#${channelIds['start-here']}> to unlock the fun stuff.`,
         },
         {
           type: 10,
-          content: `- 💬 Real talk in <#${channelIds.lobby}>`,
+          content: `${staticEmojiIds.star_icon} Introduce yourself in <#${channelIds['introduce-meowself']}> or just lurk and judge us silently.`,
+        },
+        ...divisor,
+        {
+          type: 10,
+          content: `### ${staticEmojiIds.star_icon} Community Roles (more coming soon):`,
+        },
+        margin1,
+        {
+          type: 10,
+          content: `${staticEmojiIds.dot_icon} <@&${roleIds.mod}> – Trusted team and power users`,
         },
         {
           type: 10,
-          content: `- 🖼️ Art, clips, & vibes in <#${channelIds['media-share']}>`,
+          content: `${staticEmojiIds.dot_icon} <@&${roleIds.member}> - Active members`,
         },
         {
           type: 10,
-          content: `- 🎧 Chill with lo-fi or ambient music in <#${channelIds.afterhours}>`,
+          content: `${staticEmojiIds.dot_icon} <@&${roleIds.gamer}> – Gamers`,
         },
         {
           type: 10,
-          content: `- 🎮 Game nights and chill runs in <#${channelIds.gameRoom}>`,
+          content: `${staticEmojiIds.dot_icon} <@&${roleIds.music}> – Music lovers`,
         },
         {
           type: 10,
-          content: `- 🛏️ Unload thoughts in <#${channelIds.pillowtalk}> or <#${channelIds['vent-space']}>`,
+          content: `${staticEmojiIds.dot_icon} <@&${roleIds.booster}> – Thank you, legends 💖`,
         },
-        {
-          type: 14,
-          divider: true,
-          spacing: 2,
-        },
+        ...divisor,
         {
           type: 10,
-          content: 'Community Roles (more coming soon):',
+          content: `${animatedEmojiIds.cat_clap} You’ll show up in <#${channelIds.arrivals}> — feel free to wave. Or don’t. No pressure.`,
         },
+        margin2,
         {
           type: 10,
-          content: `- <@&${roleIds.corePulse}> – trusted team and power users`,
+          content: 'Enjoy the chaos, and remember:',
         },
+        margin1,
         {
           type: 10,
-          content: `- <@&${roleIds.gamer}> – gamers, pings open`,
-        },
-        {
-          type: 10,
-          content: `- <@&${roleIds.vibeCheck}> – music lovers`,
-        },
-        {
-          type: 10,
-          content: `- <@&${roleIds.booster}> – thank you, legends 💖`,
-        },
-        {
-          type: 14,
-          divider: true,
-          spacing: 2,
-        },
-        {
-          type: 10,
-          content: `🎉 You’ll show up in <#${channelIds.arrivals}> — feel free to wave. Or don’t. No pressure.`,
-        },
-        {
-          type: 10,
-          content: 'Stay low or shine bright — either way, you’re part of the current now.\nLet’s keep the pulse going ⚡',
+          content: `### ${animatedEmojiIds.meow_meow} You’re never too old to scream in lowercase and post a cat pic. ${animatedEmojiIds.cat_nods}`,
         },
       ],
     },

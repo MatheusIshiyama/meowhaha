@@ -13,7 +13,6 @@ export class DiscordMessages {
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendStartHereMessage', 'Channel ID not found');
 
-      await discord.sendMessage(channelId, bannerMessage);
       await discord.sendMessage(channelId, startHereMessage, true);
     } catch (error) {
       logger('ERROR', 'DISCORD - sendStartHereMessage', error);
@@ -26,7 +25,8 @@ export class DiscordMessages {
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendWelcomeMessage', 'Channel ID not found');
 
-      await discord.sendMessage(channelId, welcomeMessage);
+      await discord.sendMessage(channelId, bannerMessage);
+      await discord.sendMessage(channelId, welcomeMessage, true);
     } catch (error) {
       logger('ERROR', 'DISCORD - sendWelcomeMessage', error);
     }
@@ -34,7 +34,7 @@ export class DiscordMessages {
 
   async sendRulesMessage(): Promise<void> {
     try {
-      const channelId: string = channelIds['rules'];
+      const channelId: string = channelIds['read-the-rules'];
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendRulesMessage', 'Channel ID not found');
 

@@ -9,5 +9,6 @@ export const channelIds: Record<string, string> = {
   'stats': '1386219879673237571',
   'vent-space': '1386215310235013271',
   'welcome': '1386229940130676767',
-  'rules': '1386880928374067313',
+  'read-the-rules': '1386880928374067313',
+  'introduce-meowself': '1387041328935993375',
 };
