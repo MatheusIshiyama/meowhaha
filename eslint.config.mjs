@@ -53,7 +53,7 @@ export default tseslint.config(
       'no-useless-constructor': 'off',
       'no-empty-function': 'off',
       'newline-before-return': 'error',
-      'max-len': ['error', 140],
+      'max-len': ['error', 160],
       'eol-last': ['error', 'always'],
       'max-classes-per-file': 'off',
       'new-parens': 'error',
