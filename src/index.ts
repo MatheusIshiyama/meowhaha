@@ -1,10 +1,12 @@
 import '@/config/env';
-import { discordMessages } from '@/services/discordMessages';
+import { Bot } from '@/bot';
+// import { discordMessages } from '@/services/discordMessages';
 
-function main(): void {
-  discordMessages.sendWelcomeMessage();
-  discordMessages.sendRulesMessage();
-  discordMessages.sendStartHereMessage();
-}
+// function main(): void {
+//   discordMessages.sendWelcomeMessage();
+//   discordMessages.sendRulesMessage();
+//   discordMessages.sendStartHereMessage();
+// }
 
-main();
+const bot: Bot = new Bot();
+bot.start();

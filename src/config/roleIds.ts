@@ -9,4 +9,4 @@ export const roleIds: Record<string, string> = {
   music: '1386230631792377947',
   newcomer: '1386875380140343296',
   owner: '1386229499095683154',
-};
+} as const;

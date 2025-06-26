@@ -34,6 +34,24 @@ class Discord {
       logger('ERROR', 'DISCORD', error);
     }
   }
+
+  async updateChannelName(channelId: string, name: string): Promise<any> {
+    try {
+      const response: AxiosResponse = await axios.patch(
+        `${this.api}/channels/${channelId}`,
+        { name },
+        {
+          headers: {
+            Authorization: `Bot ${this.token}`,
+          },
+        },
+      );
+
+      return response.data;
+    } catch (error) {
+      logger('ERROR', 'DISCORD', error);
+    }
+  }
 }
 
 export const discord: Discord = new Discord();

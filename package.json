@@ -1,7 +1,7 @@
 {
-  "name": "late-night-haven",
+  "name": "meowhaha",
   "version": "1.0.0",
-  "description": "🌙 A Discord message bot for Late Night Haven — sends vibe messages, logs arrivals, and sets the mood.",
+  "description": "✨ Meowhaha is a playful and chaotic cat-themed Discord server, and this project is its main Discord bot built with Node.js. It handles welcome messages, webhooks, role automation, and other server interactions.",
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node -r tsconfig-paths/register src/index.ts",
@@ -14,17 +14,19 @@
     "discord",
     "webhook",
     "bot",
-    "late-night",
+    "meowhaha",
     "vibes",
     "typescript"
   ],
-  "repository": "https://github.com/MatheusIshiyama/late-night-haven.git",
+  "repository": "https://github.com/MatheusIshiyama/meowhaha.git",
   "author": "Matheus Ishiyama <matheus.ishiyama@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.10.0",
+    "discord.js": "^14.20.0",
     "dotenv": "^16.5.0",
-    "form-data": "^4.0.3"
+    "form-data": "^4.0.3",
+    "node-cron": "^4.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

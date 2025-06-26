@@ -1,4 +1,6 @@
 export const channelIds: Record<string, string> = {
+  'serverMood': '1386219879673237571',
+  'membersCount': '1386226043320537190',
   'afterhours': '1386227888444932127',
   'arrivals': '1386231606695559188',
   'gameRoom': '1386215369961766952',
@@ -11,4 +13,4 @@ export const channelIds: Record<string, string> = {
   'welcome': '1386229940130676767',
   'read-the-rules': '1386880928374067313',
   'introduce-meowself': '1387041328935993375',
-};
+} as const;
