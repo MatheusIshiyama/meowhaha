@@ -18,7 +18,7 @@ const welcomeMessage: DiscordMessage = {
         margin1,
         {
           type: 10,
-          content: `${animatedEmojiIds.say_hi} Hi there, brave wanderer of the meowniverse ${animatedEmojiIds.nods}\nyou’ve just entered a realm of chaos, cats, creativity, and occasional keyboard smashing.'`,
+          content: `${animatedEmojiIds.say_hi} Hi there, brave wanderer of the meowniverse ${animatedEmojiIds.nods}\nyou’ve just entered a realm of chaos, cats, creativity, and occasional keyboard smashing.`,
         },
         margin1,
         {
