@@ -11,7 +11,9 @@ export class Bot {
   }
 
   async loadEvents(): Promise<void> {
-    const eventFiles: string[] = fs.readdirSync(path.join(__dirname, 'events')).filter((file: string) => file.endsWith('.ts'));
+    const eventFiles: string[] = fs
+      .readdirSync(path.join(__dirname, 'events'))
+      .filter((file: string) => file.endsWith('.js') || file.endsWith('.ts'));
 
     for (const file of eventFiles) {
       const { name, execute } = await import(`@/events/${file}`);
