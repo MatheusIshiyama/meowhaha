@@ -3,7 +3,6 @@ import { Client } from 'discord.js';
 import { activities } from '@/config/activities';
 import { Activity } from '@/types/activity';
 import { getRandom } from '@/utils/getRandom';
-import { logger } from '@/utils/logger';
 
 export const updateBotActivities: (bot: Client) => void = (bot: Client) => {
   if (!bot.user) return;
@@ -19,6 +18,4 @@ export const updateBotActivities: (bot: Client) => void = (bot: Client) => {
       },
     ],
   });
-
-  logger('INFO', 'BOT ACTIVITY UPDATED', activity.name);
 };

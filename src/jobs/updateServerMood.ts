@@ -7,9 +7,8 @@ import { logger } from '@/utils/logger';
 export const updateServerMood: () => Promise<void> = async () => {
   try {
     const mood: string = getRandom(moods);
-    await discord.updateChannelName(channelIds.serverMood, mood);
 
-    logger('INFO', 'SERVER MOOD UPDATED', mood);
+    await discord.updateChannelName(channelIds.serverMood, mood);
   } catch (error) {
     logger('ERROR', 'ERROR UPDATING SERVER MOOD', error);
   }

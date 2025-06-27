@@ -16,8 +16,6 @@ export const updateMembersCount: (bot: Client) => void = (bot: Client) => {
     if (!channel) return logger('ERROR', 'CHANNEL NOT FOUND - MEMBERS COUNT', channelIds.membersCount);
 
     channel.setName(`😺・meows: ${memberCount}`);
-
-    logger('INFO', 'MEMBERS COUNT UPDATED', memberCount);
   } catch (error) {
     logger('ERROR', 'ERROR UPDATING MEMBERS COUNT', error);
   }
