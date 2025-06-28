@@ -26,14 +26,18 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.10.0",
-    "discord.js": "^14.20.0",
+    "cors": "^2.8.5",
+    "discord.js": "^14.21.0",
     "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "form-data": "^4.0.3",
     "module-alias": "^2.2.3",
     "node-cron": "^4.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^24.0.3",
     "eslint": "^9.29.0",
