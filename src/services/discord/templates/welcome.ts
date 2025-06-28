@@ -3,7 +3,7 @@ import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/
 import { DiscordMessage } from '@/types/discord';
 import { divisor, margin1, margin2 } from '@/utils';
 
-export const welcomeMessage: DiscordMessage = {
+export const welcomeTemplate: DiscordMessage = {
   flags: 32768,
   components: [
     {

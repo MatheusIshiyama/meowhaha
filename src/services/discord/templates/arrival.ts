@@ -27,7 +27,7 @@ const getRandomMessage: (userId: string) => string = (userId: string): string =>
   return getRandom(messages);
 };
 
-export const arrivalMessage: (member: GuildMember) => DiscordMessage = (member: GuildMember): DiscordMessage => {
+export const arrivalTemplate: (member: GuildMember) => DiscordMessage = (member: GuildMember): DiscordMessage => {
   const animatedEmoji: string = getAnimatedEmoji();
 
   const message: string = getRandomMessage(member.user.id);

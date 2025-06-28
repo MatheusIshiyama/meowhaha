@@ -1,6 +1,6 @@
 import { channelIds } from '@/config/discord';
 import { discordApi } from '@/services/discord';
-import { bannerMessage, rulesMessage, welcomeMessage } from '@/services/discord/templates';
+import { bannerTemplate, rulesTemplate, welcomeTemplate } from '@/services/discord/templates';
 import { logger } from '@/utils';
 
 export const sendWelcomeMessage: () => Promise<void> = async () => {
@@ -9,8 +9,8 @@ export const sendWelcomeMessage: () => Promise<void> = async () => {
 
     if (!channelId) return logger('ERROR', 'DISCORD - sendWelcomeMessage', 'Channel ID not found');
 
-    await discordApi.sendMessage(channelId, bannerMessage);
-    await discordApi.sendMessage(channelId, welcomeMessage, true);
+    await discordApi.sendMessage(channelId, bannerTemplate);
+    await discordApi.sendMessage(channelId, welcomeTemplate, true);
   } catch (error) {
     logger('ERROR', 'DISCORD - sendWelcomeMessage', error);
   }
@@ -22,7 +22,7 @@ export const sendRulesMessage: () => Promise<void> = async () => {
 
     if (!channelId) return logger('ERROR', 'DISCORD - sendRulesMessage', 'Channel ID not found');
 
-    await discordApi.sendMessage(channelId, rulesMessage, true);
+    await discordApi.sendMessage(channelId, rulesTemplate, true);
   } catch (error) {
     logger('ERROR', 'DISCORD - sendRulesMessage', error);
   }
