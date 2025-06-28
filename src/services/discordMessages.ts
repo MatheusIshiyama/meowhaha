@@ -1,5 +1,5 @@
 import { channelIds } from '@/config/channelIds';
-import { discord } from '@/lib/discord';
+import { discordApi } from '@/lib/discordApi';
 import bannerMessage from '@/messages/banner';
 import rulesMessage from '@/messages/rules';
 import startHereMessage from '@/messages/start-here';
@@ -13,7 +13,7 @@ export class DiscordMessages {
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendStartHereMessage', 'Channel ID not found');
 
-      await discord.sendMessage(channelId, startHereMessage, true);
+      await discordApi.sendMessage(channelId, startHereMessage, true);
     } catch (error) {
       logger('ERROR', 'DISCORD - sendStartHereMessage', error);
     }
@@ -25,8 +25,8 @@ export class DiscordMessages {
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendWelcomeMessage', 'Channel ID not found');
 
-      await discord.sendMessage(channelId, bannerMessage);
-      await discord.sendMessage(channelId, welcomeMessage, true);
+      await discordApi.sendMessage(channelId, bannerMessage);
+      await discordApi.sendMessage(channelId, welcomeMessage, true);
     } catch (error) {
       logger('ERROR', 'DISCORD - sendWelcomeMessage', error);
     }
@@ -38,7 +38,7 @@ export class DiscordMessages {
 
       if (!channelId) return logger('ERROR', 'DISCORD - sendRulesMessage', 'Channel ID not found');
 
-      await discord.sendMessage(channelId, rulesMessage, true);
+      await discordApi.sendMessage(channelId, rulesMessage, true);
     } catch (error) {
       logger('ERROR', 'DISCORD - sendRulesMessage', error);
     }

@@ -3,13 +3,13 @@ import FormData from 'form-data';
 
 import { logger } from '@/utils/logger';
 
-class Discord {
+class DiscordApi {
   private token: string;
   private api: string;
 
   constructor() {
     this.token = process.env.DISCORD_TOKEN || '';
-    this.api = 'https://discord.com/api/v10';
+    this.api = `https://discord.com/api/${process.env.DISCORD_API_VERSION || 'v10'}`;
   }
 
   async sendMessage(channelId: string, data: any, withComponents: boolean = false): Promise<any> {
@@ -54,4 +54,4 @@ class Discord {
   }
 }
 
-export const discord: Discord = new Discord();
+export const discordApi: DiscordApi = new DiscordApi();
