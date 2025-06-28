@@ -17,7 +17,8 @@ const rulesMessage: DiscordMessage = {
         margin1,
         {
           type: 10,
-          content: 'Hi there, agent of chaos 🐾\nBefore you start meowing around, please read the rules — or the claws will come out. Softly.',
+          content:
+            'Hi there, agent of chaos 🐾\nBefore you start meowing around, please read the rules — or the claws will come out. Softly.',
         },
         ...divisor,
         {

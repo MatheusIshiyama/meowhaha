@@ -11,6 +11,7 @@ const welcomeMessage: DiscordMessage = {
     {
       type: 17,
       components: [
+        margin1,
         {
           type: 10,
           content: `# ${animatedEmojiIds.meow_meow} Welcome to meowhaha! ${animatedEmojiIds.happy_cat}`,
@@ -85,6 +86,7 @@ const welcomeMessage: DiscordMessage = {
           type: 10,
           content: `### ${animatedEmojiIds.meow_meow} You’re never too old to scream in lowercase and post a cat pic. ${animatedEmojiIds.cat_nods}`,
         },
+        margin1,
       ],
     },
   ],

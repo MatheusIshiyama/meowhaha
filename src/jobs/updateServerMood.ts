@@ -8,7 +8,7 @@ export const updateServerMood: () => Promise<void> = async () => {
   try {
     const mood: string = getRandom(moods);
 
-    await discord.updateChannelName(channelIds.serverMood, mood);
+    await discord.updateChannelName(channelIds['server-mood'], mood);
   } catch (error) {
     logger('ERROR', 'ERROR UPDATING SERVER MOOD', error);
   }

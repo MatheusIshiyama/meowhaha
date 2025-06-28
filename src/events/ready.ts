@@ -11,9 +11,7 @@ export const name: string = Events.ClientReady;
 export const execute: (client: Client) => Promise<void> = async (client: Client) => {
   logger('INFO', 'BOT', `Logged in as ${client.user?.tag}`);
 
-  updateServerMood();
   updateBotActivities(client);
-  updateMembersCount(client);
 
   scheduleJobs(client);
 };
@@ -21,5 +19,8 @@ export const execute: (client: Client) => Promise<void> = async (client: Client)
 const scheduleJobs: (client: Client) => void = (client: Client) => {
   cron.schedule('*/10 * * * * *', (): void => updateBotActivities(client));
 
-  cron.schedule('*/10 * * * *', (): Promise<void> => updateServerMood());
+  cron.schedule('*/10 * * * *', (): void => {
+    updateServerMood();
+    updateMembersCount(client);
+  });
 };

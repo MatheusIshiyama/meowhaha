@@ -12,8 +12,8 @@ export const updateMembersCount: (bot: Client) => void = (bot: Client) => {
 
     const memberCount: number = guild.memberCount;
 
-    const channel: Channel | undefined = guild.channels.cache.get(channelIds.membersCount);
-    if (!channel) return logger('ERROR', 'CHANNEL NOT FOUND - MEMBERS COUNT', channelIds.membersCount);
+    const channel: Channel | undefined = guild.channels.cache.get(channelIds['members-count']);
+    if (!channel) return logger('ERROR', 'CHANNEL NOT FOUND - MEMBERS COUNT', channelIds['members-count']);
 
     channel.setName(`😺・meows: ${memberCount}`);
   } catch (error) {
