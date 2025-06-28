@@ -1,4 +1,4 @@
-import { channelIds } from '@/config/channelIds';
+import { channelIds } from '@/config/discord';
 import { discordApi } from '@/lib/discordApi';
 import bannerMessage from '@/messages/banner';
 import rulesMessage from '@/messages/rules';

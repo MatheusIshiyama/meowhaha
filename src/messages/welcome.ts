@@ -1,7 +1,5 @@
 /* eslint-disable max-len */
-import { channelIds } from '@/config/channelIds';
-import { animatedEmojiIds, staticEmojiIds } from '@/config/emojiIds';
-import { roleIds } from '@/config/roleIds';
+import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
 import { divisor, margin1, margin2 } from '@/utils/divider';
 

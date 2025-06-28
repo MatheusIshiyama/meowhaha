@@ -1,5 +1,4 @@
-import { channelIds } from '@/config/channelIds';
-import { moods } from '@/config/moods';
+import { channelIds, moods } from '@/config/discord';
 import { discordApi } from '@/lib/discordApi';
 import { getRandom } from '@/utils/getRandom';
 import { logger } from '@/utils/logger';

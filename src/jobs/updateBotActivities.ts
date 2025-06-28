@@ -1,6 +1,6 @@
 import { Client } from 'discord.js';
 
-import { activities } from '@/config/activities';
+import { activities } from '@/config/discord';
 import { Activity } from '@/types/activity';
 import { getRandom } from '@/utils/getRandom';
 

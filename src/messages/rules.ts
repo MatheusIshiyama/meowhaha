@@ -1,5 +1,4 @@
-import { channelIds } from '@/config/channelIds';
-import { animatedEmojiIds, staticEmojiIds } from '@/config/emojiIds';
+import { animatedEmojiIds, channelIds, staticEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
 import { margin1, divisor, margin2 } from '@/utils/divider';
 

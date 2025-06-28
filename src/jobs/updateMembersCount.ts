@@ -1,6 +1,6 @@
 import { Channel, Client, Guild } from 'discord.js';
 
-import { channelIds } from '@/config/channelIds';
+import { channelIds } from '@/config/discord';
 import { logger } from '@/utils/logger';
 
 const guildId: string = '1386212819669880913';

@@ -1,6 +1,6 @@
 import { GuildMember } from 'discord.js';
 
-import { animatedEmojiIds } from '@/config/emojiIds';
+import { animatedEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
 import { margin1 } from '@/utils/divider';
 

@@ -1,6 +1,6 @@
 import { Events, GuildMember } from 'discord.js';
 
-import { channelIds } from '@/config/channelIds';
+import { channelIds } from '@/config/discord';
 import { updateMembersCount } from '@/jobs/updateMembersCount';
 import { discordApi } from '@/lib/discordApi';
 import { arrivalMessage } from '@/messages/arrival';

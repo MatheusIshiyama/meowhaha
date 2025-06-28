@@ -1,4 +1,4 @@
-import { channelIds } from '@/config/channelIds';
+import { channelIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
 
 const startHereMessage: DiscordMessage = {
