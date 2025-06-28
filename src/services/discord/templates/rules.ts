@@ -1,5 +1,5 @@
 import { animatedEmojiIds, channelIds, staticEmojiIds } from '@/config/discord';
-import { DiscordMessage } from '@/types/discordMessage';
+import { DiscordMessage } from '@/types/discord';
 import { margin1, divisor, margin2 } from '@/utils';
 
 export const rulesMessage: DiscordMessage = {

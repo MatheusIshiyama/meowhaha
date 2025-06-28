@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/discord';
-import { DiscordMessage } from '@/types/discordMessage';
+import { DiscordMessage } from '@/types/discord';
 import { divisor, margin1, margin2 } from '@/utils';
 
 export const welcomeMessage: DiscordMessage = {

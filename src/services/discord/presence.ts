@@ -1,7 +1,7 @@
 import { Client } from 'discord.js';
 
 import { activities } from '@/config/discord';
-import { Activity } from '@/types/activity';
+import { Activity } from '@/types/discord';
 import { getRandom } from '@/utils';
 
 export const updateBotActivities: (bot: Client) => void = (bot: Client) => {

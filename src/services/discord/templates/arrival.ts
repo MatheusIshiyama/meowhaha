@@ -1,7 +1,7 @@
 import { GuildMember } from 'discord.js';
 
 import { animatedEmojiIds } from '@/config/discord';
-import { DiscordMessage } from '@/types/discordMessage';
+import { DiscordMessage } from '@/types/discord';
 import { getRandom, margin1 } from '@/utils';
 
 const getAnimatedEmoji: () => string = (): string => {

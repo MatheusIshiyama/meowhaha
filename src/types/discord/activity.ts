@@ -1,6 +1,6 @@
 import { ActivityType } from 'discord.js';
 
-export type Activity = {
+export interface Activity {
   name: string;
   type: ActivityType;
-};
+}

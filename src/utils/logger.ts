@@ -1,4 +1,4 @@
-import type { LogType, LoggerType } from '@/types/logger';
+import type { LogType, LoggerType } from '@/types';
 
 /* eslint no-console: "off" */
 export function logger(type: LoggerType, title: string, message: string | unknown): void {

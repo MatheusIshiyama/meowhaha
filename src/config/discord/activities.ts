@@ -1,6 +1,6 @@
 import { ActivityType } from 'discord.js';
 
-import { Activity } from '@/types/activity';
+import { Activity } from '@/types/discord';
 
 export const activities: readonly Activity[] = [
   { name: 'with yarn', type: ActivityType.Playing },
