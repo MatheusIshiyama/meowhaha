@@ -3,11 +3,12 @@ import { GuildMember } from 'discord.js';
 import { animatedEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
 import { margin1 } from '@/utils/divider';
+import { getRandom } from '@/utils/getRandom';
 
 const getAnimatedEmoji: () => string = (): string => {
   const animatedEmoji: string[] = [animatedEmojiIds.say_hi, animatedEmojiIds.meow_meow, animatedEmojiIds.cat_nods];
 
-  return animatedEmoji[Math.floor(Math.random() * animatedEmoji.length)];
+  return getRandom(animatedEmoji);
 };
 
 const getRandomMessage: (userId: string) => string = (userId: string): string => {
@@ -24,7 +25,7 @@ const getRandomMessage: (userId: string) => string = (userId: string): string =>
     `✨ <@${userId}> sprinkled stardust over the litter-box lounge!`,
   ] as const;
 
-  return messages[Math.floor(Math.random() * messages.length)];
+  return getRandom(messages);
 };
 
 export const arrivalMessage: (member: GuildMember) => DiscordMessage = (member: GuildMember): DiscordMessage => {

@@ -2,8 +2,8 @@ import { Events, GuildMember } from 'discord.js';
 
 import { channelIds } from '@/config/discord';
 import { updateMembersCount } from '@/jobs/updateMembersCount';
-import { discordApi } from '@/lib/discordApi';
-import { arrivalMessage } from '@/messages/arrival';
+import { discordApi } from '@/services/discord';
+import { arrivalMessage } from '@/services/discord/templates';
 
 export const name: string = Events.GuildMemberAdd;
 

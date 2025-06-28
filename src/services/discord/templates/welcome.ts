@@ -3,7 +3,7 @@ import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/
 import { DiscordMessage } from '@/types/discordMessage';
 import { divisor, margin1, margin2 } from '@/utils/divider';
 
-const welcomeMessage: DiscordMessage = {
+export const welcomeMessage: DiscordMessage = {
   flags: 32768,
   components: [
     {
@@ -89,5 +89,3 @@ const welcomeMessage: DiscordMessage = {
     },
   ],
 };
-
-export default welcomeMessage;

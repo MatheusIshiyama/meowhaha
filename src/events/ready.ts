@@ -1,9 +1,7 @@
 import { Client, Events } from 'discord.js';
 import cron from 'node-cron';
 
-import { updateBotActivities } from '@/jobs/updateBotActivities';
-import { updateMembersCount } from '@/jobs/updateMembersCount';
-import { updateServerMood } from '@/jobs/updateServerMood';
+import { updateBotActivities, updateMembersCount, updateServerMood } from '@/services/discord';
 import { logger } from '@/utils/logger';
 
 export const name: string = Events.ClientReady;
