@@ -1,8 +1,8 @@
 import { Client } from 'discord.js';
 
-import { activities } from '@/config/activities';
-import { Activity } from '@/types/activity';
-import { getRandom } from '@/utils/getRandom';
+import { activities } from '@/config/discord';
+import { Activity } from '@/types/discord';
+import { getRandom } from '@/utils';
 
 export const updateBotActivities: (bot: Client) => void = (bot: Client) => {
   if (!bot.user) return;

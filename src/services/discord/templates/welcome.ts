@@ -1,11 +1,9 @@
 /* eslint-disable max-len */
-import { channelIds } from '@/config/channelIds';
-import { animatedEmojiIds, staticEmojiIds } from '@/config/emojiIds';
-import { roleIds } from '@/config/roleIds';
-import { DiscordMessage } from '@/types/discordMessage';
-import { divisor, margin1, margin2 } from '@/utils/divider';
+import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/discord';
+import { DiscordMessage } from '@/types/discord';
+import { divisor, margin1, margin2 } from '@/utils';
 
-const welcomeMessage: DiscordMessage = {
+export const welcomeTemplate: DiscordMessage = {
   flags: 32768,
   components: [
     {
@@ -91,5 +89,3 @@ const welcomeMessage: DiscordMessage = {
     },
   ],
 };
-
-export default welcomeMessage;

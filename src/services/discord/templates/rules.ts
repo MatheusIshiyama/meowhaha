@@ -1,9 +1,8 @@
-import { channelIds } from '@/config/channelIds';
-import { animatedEmojiIds, staticEmojiIds } from '@/config/emojiIds';
-import { DiscordMessage } from '@/types/discordMessage';
-import { margin1, divisor, margin2 } from '@/utils/divider';
+import { animatedEmojiIds, channelIds, staticEmojiIds } from '@/config/discord';
+import { DiscordMessage } from '@/types/discord';
+import { margin1, divisor, margin2 } from '@/utils';
 
-const rulesMessage: DiscordMessage = {
+export const rulesTemplate: DiscordMessage = {
   flags: 32768,
   components: [
     {
@@ -98,5 +97,3 @@ const rulesMessage: DiscordMessage = {
     },
   ],
 };
-
-export default rulesMessage;

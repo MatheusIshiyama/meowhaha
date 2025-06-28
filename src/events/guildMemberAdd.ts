@@ -1,14 +1,13 @@
 import { Events, GuildMember } from 'discord.js';
 
-import { channelIds } from '@/config/channelIds';
-import { updateMembersCount } from '@/jobs/updateMembersCount';
-import { discord } from '@/lib/discord';
-import { arrivalMessage } from '@/messages/arrival';
+import { channelIds } from '@/config/discord';
+import { discordApi, updateMembersCount } from '@/services/discord';
+import { arrivalTemplate } from '@/services/discord/templates';
 
 export const name: string = Events.GuildMemberAdd;
 
 export const execute: (member: GuildMember) => Promise<void> = async (member: GuildMember) => {
   updateMembersCount(member.client);
 
-  discord.sendMessage(channelIds['arrivals'], arrivalMessage(member), true);
+  discordApi.sendMessage(channelIds['arrivals'], arrivalTemplate(member), true);
 };

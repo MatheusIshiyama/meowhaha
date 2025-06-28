@@ -1,4 +1,4 @@
-import { DiscordMessageComponent } from '@/types/discordMessage';
+import { DiscordMessageComponent } from '@/types/discord';
 
 export const margin1: DiscordMessageComponent = {
   type: 14,
