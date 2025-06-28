@@ -1,7 +1,7 @@
 import { Client, Events } from 'discord.js';
 import cron from 'node-cron';
 
-import { updateBotActivities, updateMembersCount, updateServerMood } from '@/services/discord';
+import { updateBoosterCount, updateBotActivities, updateMembersCount, updateServerMood } from '@/services/discord';
 import { logger } from '@/utils';
 
 export const name: string = Events.ClientReady;
@@ -20,5 +20,6 @@ const scheduleJobs: (client: Client) => void = (client: Client) => {
   cron.schedule('*/10 * * * *', (): void => {
     updateServerMood();
     updateMembersCount(client);
+    updateBoosterCount(client);
   });
 };
