@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { animatedEmojiIds, channelIds, roleIds, staticEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
-import { divisor, margin1, margin2 } from '@/utils/divider';
+import { divisor, margin1, margin2 } from '@/utils';
 
 export const welcomeMessage: DiscordMessage = {
   flags: 32768,

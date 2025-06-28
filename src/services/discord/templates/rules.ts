@@ -1,6 +1,6 @@
 import { animatedEmojiIds, channelIds, staticEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
-import { margin1, divisor, margin2 } from '@/utils/divider';
+import { margin1, divisor, margin2 } from '@/utils';
 
 export const rulesMessage: DiscordMessage = {
   flags: 32768,

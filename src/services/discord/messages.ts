@@ -1,7 +1,7 @@
 import { channelIds } from '@/config/discord';
 import { discordApi } from '@/services/discord';
 import { bannerMessage, rulesMessage, welcomeMessage } from '@/services/discord/templates';
-import { logger } from '@/utils/logger';
+import { logger } from '@/utils';
 
 export const sendWelcomeMessage: () => Promise<void> = async () => {
   try {

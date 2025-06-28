@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import FormData from 'form-data';
 
-import { logger } from '@/utils/logger';
+import { logger } from '@/utils';
 
 class DiscordApi {
   private token: string;

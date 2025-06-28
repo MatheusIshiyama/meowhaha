@@ -2,8 +2,7 @@ import { Client, Guild, Channel } from 'discord.js';
 
 import { channelIds, moods } from '@/config/discord';
 import { discordApi } from '@/services/discord/api';
-import { getRandom } from '@/utils/getRandom';
-import { logger } from '@/utils/logger';
+import { getRandom, logger } from '@/utils';
 
 const guildId: string = '1386212819669880913';
 

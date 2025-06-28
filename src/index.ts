@@ -4,7 +4,7 @@ import express, { type Express } from 'express';
 
 import { Bot } from '@/bot';
 import { healthRoutes } from '@/routes/health';
-import { logger } from '@/utils/logger';
+import { logger } from '@/utils';
 
 class App {
   private bot: Bot;

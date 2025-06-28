@@ -2,8 +2,7 @@ import { GuildMember } from 'discord.js';
 
 import { animatedEmojiIds } from '@/config/discord';
 import { DiscordMessage } from '@/types/discordMessage';
-import { margin1 } from '@/utils/divider';
-import { getRandom } from '@/utils/getRandom';
+import { getRandom, margin1 } from '@/utils';
 
 const getAnimatedEmoji: () => string = (): string => {
   const animatedEmoji: string[] = [animatedEmojiIds.say_hi, animatedEmojiIds.meow_meow, animatedEmojiIds.cat_nods];
