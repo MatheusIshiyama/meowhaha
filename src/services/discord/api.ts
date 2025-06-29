@@ -31,7 +31,7 @@ class DiscordApi {
 
       return response.data;
     } catch (error) {
-      logger('ERROR', 'DISCORD', error);
+      logger('ERROR', 'DISCORD API - SEND MESSAGE', error);
     }
   }
 
@@ -49,7 +49,7 @@ class DiscordApi {
 
       return response.data;
     } catch (error) {
-      logger('ERROR', 'DISCORD', error);
+      logger('ERROR', 'DISCORD API - UPDATE CHANNEL NAME', error);
     }
   }
 }

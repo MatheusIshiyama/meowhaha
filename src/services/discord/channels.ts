@@ -19,7 +19,7 @@ export const updateBoosterCount: (bot: Client) => void = (bot: Client) => {
 
     channel.setName(`💎・meow club: ${boosterCount}`);
   } catch (error) {
-    logger('ERROR', 'ERROR UPDATING BOOSTER COUNT', error);
+    logger('ERROR', 'DISCORD CHANNELS - UPDATE BOOSTER COUNT', error);
   }
 };
 
@@ -35,7 +35,7 @@ export const updateMembersCount: (bot: Client) => void = (bot: Client) => {
 
     channel.setName(`😺・meows: ${memberCount}`);
   } catch (error) {
-    logger('ERROR', 'ERROR UPDATING MEMBERS COUNT', error);
+    logger('ERROR', 'DISCORD CHANNELS - UPDATE MEMBERS COUNT', error);
   }
 };
 
@@ -45,6 +45,6 @@ export const updateServerMood: () => Promise<void> = async () => {
 
     await discordApi.updateChannelName(channelIds['server-mood'], mood);
   } catch (error) {
-    logger('ERROR', 'ERROR UPDATING SERVER MOOD', error);
+    logger('ERROR', 'DISCORD CHANNELS - UPDATE SERVER MOOD', error);
   }
 };
