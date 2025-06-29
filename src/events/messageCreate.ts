@@ -1,7 +1,7 @@
 import { Events, Message } from 'discord.js';
 
 import { guildId } from '@/config/discord';
-import { arrival, channelDescription, rules, startHere, welcome } from '@/handlers';
+import { arrival, channelDescription, gitCat, resources, rules, startHere, welcome } from '@/handlers';
 import { Reply } from '@/types/discord';
 import { logger } from '@/utils';
 
@@ -28,9 +28,11 @@ export const execute: (message: Message) => void = (message: Message) => {
 };
 
 const replies: Record<string, Reply> = {
-  startHere,
   arrival,
-  rules,
-  welcome,
   channelDescription,
+  gitCat,
+  resources,
+  rules,
+  startHere,
+  welcome,
 };
