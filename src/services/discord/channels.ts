@@ -1,10 +1,8 @@
 import { Client, Guild, Channel, GuildMember, Collection } from 'discord.js';
 
-import { channelIds, moods } from '@/config/discord';
+import { channelIds, guildId, moods } from '@/config/discord';
 import { discordApi } from '@/services/discord/api';
 import { getRandom, logger } from '@/utils';
-
-const guildId: string = '1386212819669880913';
 
 export const updateBoosterCount: (bot: Client) => void = (bot: Client) => {
   try {
