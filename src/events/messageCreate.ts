@@ -1,8 +1,8 @@
 import { Events, Message } from 'discord.js';
 
 import { guildId } from '@/config/discord';
-import { arrival, channelDescription, gitCat, resources, rules, startHere, welcome } from '@/handlers';
-import { Reply } from '@/types/discord';
+import { arrival, channelDescription, chooseYourCat, gitCat, resources, rules, startHere, welcome } from '@/handlers';
+import { ReplyHandler } from '@/types/discord';
 import { logger } from '@/utils';
 
 export const name: string = Events.MessageCreate;
@@ -27,9 +27,10 @@ export const execute: (message: Message) => void = (message: Message) => {
   }
 };
 
-const replies: Record<string, Reply> = {
+const replies: Record<string, ReplyHandler> = {
   arrival,
   channelDescription,
+  chooseYourCat,
   gitCat,
   resources,
   rules,

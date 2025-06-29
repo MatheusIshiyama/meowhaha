@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { Interaction, Message } from 'discord.js';
 
 export interface DiscordMessageComponentEmoji {
   id?: string;
@@ -23,4 +23,6 @@ export interface DiscordMessage {
   components: DiscordMessageComponent[];
 }
 
-export type Reply = (message: Message) => Promise<void>;
+export type ReplyHandler = (message: Message) => Promise<void>;
+
+export type InteractionHandler = (interaction: Interaction) => void;

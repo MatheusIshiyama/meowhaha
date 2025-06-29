@@ -8,6 +8,7 @@ export const channelIds: Record<string, string> = {
   'booster-count': '1388422157301977209',
   'cat-gpt': '1386215448617549924',
   'cat-snaps': '1386214709279330335',
+  'choose-your-cat': '1388924911359365200',
   'deep-meows': '1387047186692440094',
   'design-dump': '1387047738348146799',
   'gg-chat': '1386226744771608586',

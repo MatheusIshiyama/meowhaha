@@ -1,21 +1,22 @@
-import { Events, GuildMember, Interaction, MessageFlags } from 'discord.js';
+import { Events, Interaction } from 'discord.js';
 
-import { animatedEmojiIds, roleIds } from '@/config/discord';
+import { setGGCatsRole, setMeowFMRole, setMemberRole } from '@/handlers/interactions';
+import { InteractionHandler } from '@/types/discord';
 
 export const name: string = Events.InteractionCreate;
 
 export const execute: (interaction: Interaction) => void = (interaction: Interaction) => {
   if (!interaction.isButton()) return;
 
-  if (interaction.customId === 'set-member-role') {
-    const member: GuildMember = interaction.member as GuildMember;
+  const interactionHandler: InteractionHandler | undefined = interactions[interaction.customId];
 
-    member.roles.add(roleIds.member);
-    member.roles.remove(roleIds.newcomer);
+  if (!interactionHandler) return;
 
-    interaction.reply({
-      content: `${animatedEmojiIds.cat_nods} Now you are a meow member! ${animatedEmojiIds.cat_drinking}`,
-      flags: [MessageFlags.Ephemeral],
-    });
-  }
+  interactionHandler(interaction);
+};
+
+const interactions: Record<string, InteractionHandler> = {
+  'set-member-role': setMemberRole,
+  'set-gg-cats-role': setGGCatsRole,
+  'set-meow-fm-role': setMeowFMRole,
 };

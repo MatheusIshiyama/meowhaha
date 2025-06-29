@@ -3,27 +3,34 @@ import { ForumChannel, GuildMember, Message, ThreadChannel } from 'discord.js';
 
 import { channelIds, threadTagIds } from '@/config/discord';
 import { discordApi } from '@/services/discord';
-import { arrivalTemplate, getChannelDescription, rulesTemplate, startHereTemplate, welcomeTemplate } from '@/services/discord/templates';
-import { DiscordMessage, Reply, Thread } from '@/types/discord';
+import {
+  arrivalTemplate,
+  chooseYourCatTemplate,
+  getChannelDescription,
+  rulesTemplate,
+  startHereTemplate,
+  welcomeTemplate,
+} from '@/services/discord/templates';
+import { DiscordMessage, ReplyHandler, Thread } from '@/types/discord';
 import { logger } from '@/utils';
 
-export const startHere: Reply = async (message: Message): Promise<void> => {
+export const startHere: ReplyHandler = async (message: Message): Promise<void> => {
   discordApi.sendMessage(message.channelId, startHereTemplate, true);
 };
 
-export const arrival: Reply = async (message: Message): Promise<void> => {
+export const arrival: ReplyHandler = async (message: Message): Promise<void> => {
   discordApi.sendMessage(message.channelId, arrivalTemplate(message.member as GuildMember), true);
 };
 
-export const rules: Reply = async (message: Message): Promise<void> => {
+export const rules: ReplyHandler = async (message: Message): Promise<void> => {
   discordApi.sendMessage(message.channelId, rulesTemplate, true);
 };
 
-export const welcome: Reply = async (message: Message): Promise<void> => {
+export const welcome: ReplyHandler = async (message: Message): Promise<void> => {
   discordApi.sendMessage(message.channelId, welcomeTemplate, true);
 };
 
-export const channelDescription: Reply = async (message: Message): Promise<void> => {
+export const channelDescription: ReplyHandler = async (message: Message): Promise<void> => {
   const channelId: string = message.channelId;
 
   if (!channelId) return logger('ERROR', 'EVENT - MESSAGE CREATE', 'Channel id not found');
@@ -39,7 +46,7 @@ export const channelDescription: Reply = async (message: Message): Promise<void>
   await message.delete();
 };
 
-export const resources: Reply = async (message: Message): Promise<void> => {
+export const resources: ReplyHandler = async (message: Message): Promise<void> => {
   const channel: ForumChannel | undefined = message.guild?.channels.cache.get(channelIds.resources) as ForumChannel;
 
   if (!channel) return logger('ERROR', 'EVENT - MESSAGE CREATE', 'Channel not found');
@@ -61,7 +68,7 @@ export const resources: Reply = async (message: Message): Promise<void> => {
   }
 };
 
-export const gitCat: Reply = async (message: Message): Promise<void> => {
+export const gitCat: ReplyHandler = async (message: Message): Promise<void> => {
   const channel: ForumChannel | undefined = message.guild?.channels.cache.get(channelIds['git-cat']) as ForumChannel;
 
   if (!channel) return logger('ERROR', 'EVENT - MESSAGE CREATE', 'Channel not found');
@@ -81,4 +88,8 @@ export const gitCat: Reply = async (message: Message): Promise<void> => {
   } catch (error) {
     logger('ERROR', 'EVENT - MESSAGE CREATE', error);
   }
+};
+
+export const chooseYourCat: ReplyHandler = async (message: Message): Promise<void> => {
+  discordApi.sendMessage(message.channelId, chooseYourCatTemplate, true);
 };
