@@ -1,20 +1,31 @@
 export const animatedEmojiIds: Record<string, string> = {
-  cat_clap: '<a:_clap_cat:1386883927326851234>',
+  admire_cat: '<a:_admire_cat:1388849230013137077>',
+  angry_ping: '<a:_angry_ping:1388851353631195256>',
+  artist_bark: '<a:_artist_bark:1388845598362435675>',
+  artist_wave: '<a:_artist_wave:1388725962283417791>',
+  burn: '<a:_burn:1388850753812303872>',
+  clap_cat: '<a:_clap_cat:1386883927326851234>',
   cat_drinking: '<a:_cat_drinking:1388725888052498505>',
   cat_nods: '<a:_cat_nods:1386896706070777918>',
+  dance: '<a:_dance:1388858063041200219>',
+  fish_pog: '<a:_fish_pog:1388844437530214561>',
   fox_wiggle: '<a:_fox_wiggle:1388725765633216682>',
   happy_cat: '<a:_happy_cat:1386884359276990585>',
   meow_meow: '<a:_meow_meow:1386883908565471263>',
   nods: '<a:_nods:1386896748378718322>',
   panda_wave: '<a:_panda_wave:1388726080810258542>',
   say_hi: '<a:_say_hi:1386896731433598978>',
-  wave: '<a:_wave:1388725962283417791>',
+  smash_keyboard: '<a:_smash_keyboard:1388844905132069014>',
 };
 
 export const staticEmojiIds: Record<string, string> = {
   alert_icon: '<:alert_icon:1386899248112730132>',
+  cat_heart: '<:_cat_heart:1388854322821070848>',
   chat_icon: '<:chat_icon:1386899261362274314>',
   dot_icon: '<:dot_icon:1386883830643949599>',
   star_icon: '<:star_icon:1386883873207615568>',
+  squirl: '<:_squirl:1388844421960831046>',
+  panic_cat: '<:_panic_cat:1388856693877772298>',
   pin_icon: '<:pin_icon:1386883893923283175>',
+  tired_cat: '<:_tired_cat:1388847328999243796>',
 } as const;

@@ -52,6 +52,26 @@ class DiscordApi {
       logger('ERROR', 'DISCORD API - UPDATE CHANNEL NAME', error);
     }
   }
+
+  async pinMessage(channelId: string, messageId: string): Promise<any> {
+    try {
+      const response: AxiosResponse = await axios.put(
+        `${this.api}/channels/${channelId}/messages/pins/${messageId}`,
+        {
+          channel_id: channelId,
+        },
+        {
+          headers: {
+            Authorization: `Bot ${this.token}`,
+          },
+        },
+      );
+
+      return response.data;
+    } catch (error) {
+      logger('ERROR', 'DISCORD API - PIN MESSAGE', error);
+    }
+  }
 }
 
 export const discordApi: DiscordApi = new DiscordApi();

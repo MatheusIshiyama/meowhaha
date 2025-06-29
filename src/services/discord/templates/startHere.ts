@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { roleIds } from '@/config/discord';
-import { animatedEmojiIds, staticEmojiIds } from '@/config/discord/emojiIds';
+import { animatedEmojiIds, staticEmojiIds } from '@/config/discord/emojis';
 import { DiscordMessage } from '@/types/discord';
 import { divisor, margin1 } from '@/utils';
 
@@ -13,7 +13,7 @@ export const startHereTemplate: DiscordMessage = {
         margin1,
         {
           type: 10,
-          content: `# ${animatedEmojiIds.panda_wave} Heya, Meowventurers! ${animatedEmojiIds.wave}`,
+          content: `# ${animatedEmojiIds.panda_wave} Heya, Meowventurers! ${animatedEmojiIds.artist_wave}`,
         },
         margin1,
         {

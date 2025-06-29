@@ -72,7 +72,7 @@ export const welcomeTemplate: DiscordMessage = {
         ...divisor,
         {
           type: 10,
-          content: `${animatedEmojiIds.cat_clap} You’ll show up in <#${channelIds.arrivals}> — feel free to wave. Or don’t. No pressure.`,
+          content: `${animatedEmojiIds.clap_cat} You’ll show up in <#${channelIds.arrivals}> — feel free to wave. Or don’t. No pressure.`,
         },
         margin2,
         {
