@@ -12,7 +12,7 @@ export const sendWelcomeMessage: () => Promise<void> = async () => {
     await discordApi.sendMessage(channelId, bannerTemplate);
     await discordApi.sendMessage(channelId, welcomeTemplate, true);
   } catch (error) {
-    logger('ERROR', 'DISCORD - sendWelcomeMessage', error);
+    logger('ERROR', 'DISCORD MESSAGES - SEND WELCOME MESSAGE', error);
   }
 };
 
@@ -24,6 +24,6 @@ export const sendRulesMessage: () => Promise<void> = async () => {
 
     await discordApi.sendMessage(channelId, rulesTemplate, true);
   } catch (error) {
-    logger('ERROR', 'DISCORD - sendRulesMessage', error);
+    logger('ERROR', 'DISCORD MESSAGES - SEND RULES MESSAGE', error);
   }
 };

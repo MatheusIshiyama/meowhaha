@@ -4,7 +4,7 @@
   "description": "✨ Meowhaha is a playful and chaotic cat-themed Discord server, and this project is its main Discord bot built with Node.js. It handles welcome messages, webhooks, role automation, and other server interactions.",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
     "build": "tsc",
     "start": "node -r module-alias/register dist/index.js",
     "lint": "eslint .",
@@ -44,7 +44,7 @@
     "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-security": "^3.0.1",
-    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.1"
