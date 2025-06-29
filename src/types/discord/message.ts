@@ -1,3 +1,5 @@
+import { Message } from 'discord.js';
+
 export interface DiscordMessageComponentEmoji {
   id?: string;
   name?: string;
@@ -20,3 +22,5 @@ export interface DiscordMessage {
   flags: number;
   components: DiscordMessageComponent[];
 }
+
+export type Reply = (message: Message) => Promise<void>;
