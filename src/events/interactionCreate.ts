@@ -1,6 +1,6 @@
-import { Events, GuildMember, Interaction } from 'discord.js';
+import { Events, GuildMember, Interaction, MessageFlags } from 'discord.js';
 
-import { roleIds } from '@/config/discord';
+import { animatedEmojiIds, roleIds } from '@/config/discord';
 
 export const name: string = Events.InteractionCreate;
 
@@ -11,5 +11,11 @@ export const execute: (interaction: Interaction) => void = (interaction: Interac
     const member: GuildMember = interaction.member as GuildMember;
 
     member.roles.add(roleIds.member);
+    member.roles.remove(roleIds.newcomer);
+
+    interaction.reply({
+      content: `${animatedEmojiIds.cat_nods} Now you are a meow member! ${animatedEmojiIds.cat_drinking}`,
+      flags: [MessageFlags.Ephemeral],
+    });
   }
 };
