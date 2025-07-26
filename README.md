@@ -1,12 +1,12 @@
 # 😼 Meowhaha — The Chaos Core
 
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Discord.js](https://img.shields.io/badge/discord.js-v14-blue?style=for-the-badge)](https://discord.js.org)
-[![Node.js](https://img.shields.io/badge/Node.js-18.x-green?style=for-the-badge&logo=node.js)](https://nodejs.org)
+[![discordgo](https://img.shields.io/badge/discordgo-v0.29.0-blue?style=for-the-badge)](https://github.com/bwmarrin/discordgo)
+[![Go](https://img.shields.io/badge/Go-1.24.x-blue?style=for-the-badge&logo=go)](https://golang.org)
 
 **Meowhaha** is a playful, chaotic, and community‑powered Discord server full of art, vibes, and controlled madness.
 
-This repo contains the main bot that powers the server — built with [`discord.js`](https://discord.js.org), TypeScript, and an event‑driven architecture.
+This repo contains the main bot that powers the server — now built with [`Go`](https://golang.org) and [`discordgo`](https://github.com/bwmarrin/discordgo), using a modular, event-driven architecture.
 
 ---
 
@@ -39,11 +39,10 @@ And this bot? It’s the brain behind the fur.
 
 ## ⚙️ Tech Stack
 
-| Tool       | Version | Notes                |
-| ---------- | ------- | -------------------- |
-| Node.js    | 18.x    | ES2020, ESM‑friendly |
-| TypeScript | Latest  | Strict mode          |
-| discord.js | v14     | Gateway Intents      |
+| Tool      | Version | Notes                        |
+| --------- | ------- | ---------------------------- |
+| Go        | 1.24.x  | Modern Go, modules           |
+| discordgo | v0.29.0 | Gateway Intents, event-based |
 
 ---
 
@@ -61,4 +60,4 @@ Just don’t remove the chaos.
 
 ---
 
-> _Made with yarn, lasers, and a little bit of catnip._
+> _Made with Go, lasers, and a little bit of catnip._

@@ -1,0 +1,18 @@
+# Config for Air (Go hot reload)
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./tmp/main.exe ./cmd/meowhaha"
+  bin = "tmp/main.exe"
+  include_ext = ["go"]
+  exclude_dir = ["assets", "bin", "vendor", "tmp"]
+  delay = 1000 # ms delay before rebuild
+
+[log]
+  time = true
+
+[color]
+  main = "cyan"
+  watcher = "yellow"
+  build = "green"
