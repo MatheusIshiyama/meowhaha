@@ -19,6 +19,10 @@ func init() {
 	flag.Parse()
 }
 
+func GetSession() *discordgo.Session {
+	return bot
+}
+
 func Start() {
 	botSession, err := discordgo.New("Bot " + *discordToken)
 	if err != nil {
@@ -28,6 +32,7 @@ func Start() {
 
 	bot = botSession
 
+	SetIntents()
 	SetEventsHandlers()
 
 	err = bot.Open()
@@ -35,6 +40,16 @@ func Start() {
 		logger.Error("BOT", "Error opening Discord session", err)
 		return
 	}
+}
+
+func SetIntents() {
+	bot.Identify.Intents |= discordgo.IntentsGuilds
+	bot.Identify.Intents |= discordgo.IntentGuildMembers
+	bot.Identify.Intents |= discordgo.IntentGuildMessages
+	bot.Identify.Intents |= discordgo.IntentGuildMessageReactions
+	bot.Identify.Intents |= discordgo.IntentGuildVoiceStates
+	bot.Identify.Intents |= discordgo.IntentGuildPresences
+	bot.Identify.Intents |= discordgo.IntentMessageContent
 }
 
 func SetEventsHandlers() {
