@@ -11,17 +11,17 @@ const (
 )
 
 func Success(title string, message string) {
-	fmt.Printf(Green+"\n[%s] ✅ %s %s\n", title, message, Reset)
+	fmt.Printf(Green+"\n✅ [%s] %s %s\n", title, message, Reset)
 }
 
 func Info(title string, message string) {
-	fmt.Printf(Blue+"\n[%s] ℹ️ %s %s\n", title, message, Reset)
+	fmt.Printf(Blue+"\nℹ️ [%s] %s %s\n", title, message, Reset)
 }
 
 func Warn(title string, message string) {
-	fmt.Printf(Yellow+"\n[%s] ⚠️ %s %s\n", title, message, Reset)
+	fmt.Printf(Yellow+"\n⚠️ [%s] %s %s\n", title, message, Reset)
 }
 
 func Error(title string, message string, err error) {
-	fmt.Printf(Red+"\n[%s] ❌ %s %s\n", title, message, err)
+	fmt.Printf(Red+"\n❌ [%s] %s %s\n", title, message, err)
 }

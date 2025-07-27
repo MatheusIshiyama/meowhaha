@@ -4,6 +4,8 @@ import (
 	"flag"
 
 	"github.com/MatheusIshiyama/meowhaha/internal/config"
+	"github.com/MatheusIshiyama/meowhaha/internal/events"
+	"github.com/MatheusIshiyama/meowhaha/internal/services/discord"
 	"github.com/MatheusIshiyama/meowhaha/pkg/logger"
 	"github.com/bwmarrin/discordgo"
 )
@@ -26,15 +28,22 @@ func Start() {
 
 	bot = botSession
 
-	bot.AddHandler(func(session *discordgo.Session, ready *discordgo.Ready) {
-		logger.Success("BOT", "Is ready for action!")
-	})
+	SetEventsHandlers()
 
 	err = bot.Open()
 	if err != nil {
 		logger.Error("BOT", "Error opening Discord session", err)
 		return
 	}
+}
+
+func SetEventsHandlers() {
+	bot.AddHandler(events.Ready)
+}
+
+func SetRandomActivity() {
+	activity := discord.Activity.GetRandomActivity()
+	discord.Activity.SetPresence(bot, activity)
 }
 
 func Close() {
